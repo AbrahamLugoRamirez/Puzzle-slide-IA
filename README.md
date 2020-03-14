@@ -3,11 +3,17 @@ Puzzle slide IA Photo
 
 
 
+
 **Inteligencia Artificial Eduardo Zurek, PH.D** 🚀
+
 ***UNIVERSIDAD DEL NORTE***
+
 **Abraham Lugo Ramírez**
+
 **Elkin Rodríguez Pérez**
+
 **Cristian Zapata Lázaro**
+
 # 📋
 En el presente reporte se va a hablar sobre el problema del 8-puzzle-Slide para ordenar una imagen y la respectiva solución. El programa se implemento usando **Jupyter** y desarrollado en **Google Collaboratory**, con el lenguaje **Python**. Se usaron las siguientes librerías:
 - from PIL import Image
@@ -25,30 +31,50 @@ Inicialmente, se sube una imagen de 300x300 pixeles en formato bmp, la cual se c
 
 En la siguiente sección se van a comparar los pixeles para ver cómo se puede ordenar la imagen. Primero se tienen los vectores **R, G, B**, estos se van a usar para comparar todas las imágenes que se crearon en lo último de la sección 1. ⚙️
 
-Comparamos toda la ultima columna de la image1 con la primera columna de la imag2
+
+
+---  
+
 ![enter image description here](https://raw.githubusercontent.com/AbrahamLugoRamirez/Puzzle-slide-IA/master/Opc1.png)
+  
+ *Comparamos toda la ultima columna de la image1 con la primera columna de la imag2*
 
-
-
-Comparamos toda la ultima fila de la image1 con la primera fila de la imag2.
 ![enter image description here](https://raw.githubusercontent.com/AbrahamLugoRamirez/Puzzle-slide-IA/master/Opc2.png)
 
+  
+ *Comparamos toda la ultima fila de la image1 con la primera fila de la imag2.*
+  
 
-Comparamos toda la primera columna de la image1 con la ultima columna de la imag2.
 ![enter image description here](https://raw.githubusercontent.com/AbrahamLugoRamirez/Puzzle-slide-IA/master/Opc3.png)
 
+*Comparamos toda la primera columna de la image1 con la ultima columna de la imag2.*
+  
 
-
-Comparamos toda la primera fila de la image1 con la ultima fila de la imag2.
 ![enter image description here](https://raw.githubusercontent.com/AbrahamLugoRamirez/Puzzle-slide-IA/master/Opc4.png)
+
+*Comparamos toda la primera fila de la image1 con la ultima fila de la imag2.*
+
+
+
+
+---
+
+
 
 Las imágenes se van a comparar en grupos de 2 usando los pixeles. Primero se van a obtener los píxeles de cada imagen y luego se va a sacar la ***media*** y la ***varianza muestral***. La media se agregará a los respectivos vectores **R, G, B** para así poder hacer respectivas conclusiones. A partir de lo anterior se van a utilizar las imágenes creadas anteriormente para buscar el objetivo, con el cual se empezará a ordenar la imagen. (Sección 3)
 
-$$RGB = [R,G, B]$$
-$$ Media(RGB) =  \frac{Pixel1(RGB)+Pixel2(RGB)}{n}.$$
-$$ Varianza(RGB) = \frac{(Pixel1(RGB)-Media(RGB))^{2}+(Pixel2(RGB)-Media(RGB))^{2}}{n-1}.$$
+
+
+$RGB = [R,G, B]$
+
+$ Media(RGB) =  \frac{Pixel1(RGB)+Pixel2(RGB)}{n}.$
+
+
+$ Varianza(RGB) = \frac{(Pixel1(RGB)-Media(RGB))^{2}+(Pixel2(RGB)-Media(RGB))^{2}}{n-1}.$
+
 Ademas de usar la **media** y la **varianza muestral**, optamos por usar la **distancia euclidiana** entre estos dos puntos. Los valores de la matriz de salida representan la distancia entre cada píxel.
-$$ DistanciaEuclidiana = \sqrt{\sum_{i=0}^{n}(pixel(RGB)-pixel2(RGB))^{2}}$$
+
+$ DistanciaEuclidiana = \sqrt{\sum_{i=0}^{n}(pixel(RGB)-pixel2(RGB))^{2}}$
 
 Al final cuando el proceso de esta sección haya terminado con éxito, tendremos un vector con la posición inicial del **Puzzle Slide**
 
