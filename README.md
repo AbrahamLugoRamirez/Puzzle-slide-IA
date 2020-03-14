@@ -95,4 +95,7 @@ En lo siguiente se van a mostrar los respectivos movimientos para ordenar la ima
 > A* Misplaced tile solution found in: #.## seconds at # depth 
 > Nodes explored: ##
 
+![enter image description here](https://raw.githubusercontent.com/AbrahamLugoRamirez/Puzzle-slide-IA/master/manhattan.png)
+
+
 **Github: [Link to respository](https://github.com/AbrahamLugoRamirez/Puzzle-slide-IA)**
